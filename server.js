@@ -28,6 +28,7 @@ console.log(to, fromNumber, callStatus, callSid);
 app.post('/voice', (req, res) => {
     console.log("Inside B");
   // Generate a TwiML response
+    const city = request.body.FromCity;
   let twiml = new twilio.twiml.VoiceResponse();
   // Talk in a robot voice over the phone.
   twiml.say('Call progress events are rad');
